@@ -4,6 +4,9 @@ package com.application.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
@@ -41,7 +44,10 @@ public class Bid {
 	 * @return the timeInt
 	 */
 	public String getTimeInt() {
-		return timeInt;
+		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	    Date date = new Date();
+	    return dateFormat.format(date);
+		//return timeInt;
 	}
 
 	/**

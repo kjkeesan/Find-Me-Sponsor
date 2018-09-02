@@ -17,18 +17,25 @@ public class LoginServiceImpl implements LoginService {
 	private LoginDao loginDao;
 
 	@Override
-	public boolean SaveUsers(Login login) {
-		boolean decesive = false;
-		if(login.getEmail() == "H@gmail.com" && login.getPassword() == "hello") {
-			decesive = true;
-		}
-		return decesive;
+	public void saveUsers(Login login) {
+		loginDao.saveUsers(login);
+	
 	}
+		
 
 	@Override  @Transactional
 	public List<Login> getAllUsers() {
 		
 		return loginDao.getAllUsers();
 	}
-
+	
+	@Override  @Transactional
+	public boolean validUser(Login login) {
+		return loginDao.validUser(login);
+		
+	}
+	
+	public String getCompName(Login login){
+		return loginDao.getCompName(login);
+	}
 }

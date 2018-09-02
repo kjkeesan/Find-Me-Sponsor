@@ -6,8 +6,12 @@ import com.application.model.Login;
 
 public interface LoginService {
 
-	public boolean SaveUsers(Login login);
+	public void saveUsers(Login login);
 
 	public List<Login> getAllUsers();
+	
+	public boolean validUser(Login login);
+	
+	public String getCompName(Login login);
 
 }

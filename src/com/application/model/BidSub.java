@@ -19,15 +19,14 @@ import org.hibernate.annotations.GenericGenerator;
 public class BidSub {	
 	
 	
-	@EmbeddedId
-	BidSubKeys bidSub;
 	
-	/*@Column(name="BidId")
+	
+	@Column(name="BidId")
 	private Integer bidId;
 	@Id
 	@Column(name="Bidder")
 	private String bidder;
-	*/
+	
 	/*@Column(name="subDate")
 	private  Date BidSubDate;*/
 	
@@ -37,16 +36,7 @@ public class BidSub {
 	/**
 	 * @return the bidSub
 	 */
-	public BidSubKeys getBidSub() {
-		return bidSub;
-	}
-
-	/**
-	 * @param bidSub the bidSub to set
-	 */
-	public void setBidSub(BidSubKeys bidSub) {
-		this.bidSub = bidSub;
-	}
+	
 
 	@Column(name="type")
 	private String bidType;
@@ -91,7 +81,7 @@ public class BidSub {
 	/**
 	 * @return the bidId
 	 */
-	/*public Integer getBidId() {
+	public Integer getBidId() {
 		return bidId;
 	}
 
@@ -100,15 +90,13 @@ public class BidSub {
 	/**
 	 * @param bidId the bidId to set
 	 */
-	/*
+	
 	public void setBidId(Integer bidId) {
 		this.bidId = bidId;
 	}
 
-	/**
-	 * @return the bidder
-	 */
-	/*
+	
+	
 	public String getBidder() {
 		return bidder;
 	}
@@ -116,11 +104,11 @@ public class BidSub {
 	/**
 	 * @param bidder the bidder to set
 	 */
-	/*
+	
 	public void setBidder(String bidder) {
 		this.bidder = bidder;
 	}
-	*/
+	
 	/**
 	 * @return the bidFile
 	 */
